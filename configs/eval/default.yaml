@@ -1,0 +1,14 @@
+# Evaluation configuration
+
+eval:
+  batch_size: 256
+  metrics: ["ndcg", "precision", "recall", "map"]
+  k: [10, 20, 50]
+
+checkpoint:
+  path: ./checkpoints/best_model.ckpt
+  load_best: true
+
+logging:
+  log_dir: ./logs/eval
+  save_results: true

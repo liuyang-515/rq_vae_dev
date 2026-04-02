@@ -1,0 +1,25 @@
+# RQ-VAE Model configuration
+
+model:
+  name: rq_vae
+  latent_dim: 64
+  hidden_dim: 256
+  num_layers: 3
+  num_embeddings: 512
+  embedding_dim: 64
+  commitment_cost: 0.25
+  decay: 0.99
+
+encoder:
+  name: rq_encoder
+  input_dim: 100
+  hidden_dim: 256
+  latent_dim: 64
+  num_layers: 3
+
+decoder:
+  name: rq_decoder
+  latent_dim: 64
+  hidden_dim: 256
+  output_dim: 100
+  num_layers: 3

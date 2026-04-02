@@ -1,0 +1,15 @@
+# @package _global_
+
+hydra:
+  run.dir: ./logs/${now:%Y-%m-%d}_${now:%H-%M-%S}/${task.name}
+  job_logging:
+    root:
+      handlers: [file, console]
+
+exdefaults:
+  - _self_
+  - train: default.yaml
+  - model: rq_vae.yaml
+  - data: default.yaml
+
+seed: 42

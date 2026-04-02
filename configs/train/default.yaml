@@ -1,0 +1,21 @@
+# Training configuration
+
+batch_size: 256
+learning_rate: 0.001
+epochs: 100
+
+optimizer:
+  name: adam
+  lr: 0.001
+  weight_decay: 0.0001
+
+scheduler:
+  name: step
+  step_size: 30
+  gamma: 0.1
+
+logging:
+  checkpoint_dir: ./checkpoints
+  log_dir: ./logs
+  save_top_k: 3
+  monitor: val_loss

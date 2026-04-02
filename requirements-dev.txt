@@ -1,0 +1,21 @@
+# Development dependencies
+pytest>=7.1.0
+black>=22.0.0
+flake8>=4.0.0
+isort>=5.10.0
+pre-commit>=2.20.0
+pytorch-lightning>=1.8.0
+hydra-core>=1.2.0
+omegaconf>=2.2.0
+
+# Optional visualization
+wandb>=0.13.0
+ tensorboard>=2.10.0
+
+# Documentation
+sphinx>=5.0.0
+ sphinx-rtd-theme>=1.0.0
+
+# Testing coverage
+coverage>=6.0.0
+pytest-cov>=3.0.0

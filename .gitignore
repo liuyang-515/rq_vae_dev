@@ -4,3 +4,71 @@ out
 wandb
 trained_models/transformer*
 tl_out
+
+# Virtual environment
+.venv/
+env/
+.env/
+venv/
+
+# Hydra outputs
+.hydra/
+
+# Logs
+logs/
+*.log
+
+# Checkpoints
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# Data
+data/
+raw_data/
+processed_data/
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+*.so
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.testmondata
+
+# Documentation
+_build/
+doc/
+docs/_build/
+
+# Misc
+.cache/
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Environment
+.env
+.env.local
+.env.*.local

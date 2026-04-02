@@ -1,0 +1,25 @@
+# @package _global_
+
+task:
+  name: train_rqvae
+
+hydra:
+  run.dir: ./logs/${now:%Y-%m-%d}_${now:%H-%M-%S}/train_rqvae
+
+train:
+  epochs: 100
+  batch_size: 256
+  learning_rate: 0.001
+  early_stopping:
+    patience: 10
+
+model:
+  model:
+    name: rq_vae
+    latent_dim: 64
+    hidden_dim: 256
+    num_layers: 3
+    num_embeddings: 512
+    embedding_dim: 64
+    commitment_cost: 0.25
+    decay: 0.99

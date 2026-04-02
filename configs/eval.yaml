@@ -1,0 +1,14 @@
+# @package _global_
+
+task:
+  name: eval
+
+hydra:
+  run.dir: ./logs/${now:%Y-%m-%d}_${now:%H-%M-%S}/eval
+
+eval:
+  checkpoint:
+    path: ./checkpoints/best_model.ckpt
+    load_best: true
+  metrics: ["ndcg", "precision", "recall", "map"]
+  k: [10, 20, 50]

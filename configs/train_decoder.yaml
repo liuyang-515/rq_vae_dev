@@ -1,0 +1,21 @@
+# @package _global_
+
+task:
+  name: train_decoder
+
+hydra:
+  run.dir: ./logs/${now:%Y-%m-%d}_${now:%H-%M-%S}/train_decoder
+
+train:
+  epochs: 50
+  batch_size: 256
+  learning_rate: 0.0005
+  early_stopping:
+    patience: 10
+
+model:
+  decoder:
+    latent_dim: 64
+    hidden_dim: 512
+    output_dim: 3952
+    num_layers: 4
